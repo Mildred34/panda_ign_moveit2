@@ -53,9 +53,9 @@ def generate_launch_description() -> LaunchDescription:
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution(
                     [
-                        FindPackageShare("ros_ign_gazebo"),
+                        FindPackageShare("ros_gz_sim"),
                         "launch",
-                        "ign_gazebo.launch.py",
+                        "gz_sim.launch.py",
                     ]
                 )
             ),
@@ -82,7 +82,7 @@ def generate_launch_description() -> LaunchDescription:
         ),
         # ros_ign_gazebo_create
         Node(
-            package="ros_ign_gazebo",
+            package="ros_gz_sim",
             executable="create",
             output="log",
             arguments=["-file", model, "--ros-args", "--log-level", log_level],

@@ -726,9 +726,20 @@
         </geometry>
       </visual>
     </link>
-    <static>false</static>
     <plugin name='ign_ros2_control::IgnitionROS2ControlPlugin' filename='ign_ros2_control-system'>
-      <parameters>/home/andrej/ws/code/repos/panda_ign_moveit2/install/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
+      <parameters>/home/alex/additive_manufacturing/grasps_planner/install/panda_moveit_config/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
     </plugin>
+    <frame name='panda_hand_tcp_virtual_joint' attached_to='panda_hand'>
+      <pose>0 0 0.1034 0 -0 0</pose>
+    </frame>
+    <frame name='panda_hand_tcp' attached_to='panda_hand_tcp_virtual_joint'/>
+    <frame name='panda_joint_wrist' attached_to='panda_link8'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='panda_hand' attached_to='panda_joint_wrist'/>
+    <frame name='panda_link8_virtual_joint' attached_to='panda_link7'>
+      <pose>0 0 0.107 0 0 -0.785398</pose>
+    </frame>
+    <frame name='panda_link8' attached_to='panda_link8_virtual_joint'/>
   </model>
 </sdf>
