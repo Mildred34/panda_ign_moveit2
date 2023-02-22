@@ -727,7 +727,7 @@
       </visual>
     </link>
     <plugin name='ign_ros2_control::IgnitionROS2ControlPlugin' filename='ign_ros2_control-system'>
-      <parameters>/home/alex/additive_manufacturing/grasps_planner/install/panda_moveit_config/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
+      <parameters>/home/alex/additive_manufacturing/grasps_planner/install/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
     </plugin>
     <frame name='panda_hand_tcp_virtual_joint' attached_to='panda_hand'>
       <pose>0 0 0.1034 0 -0 0</pose>

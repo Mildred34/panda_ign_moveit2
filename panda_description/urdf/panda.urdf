@@ -5,6 +5,9 @@
 <!-- =================================================================================== -->
 <!-- URDF for Franka Emika Panda -->
 <robot name="panda">
+  <!--
+<xacro:ign_ros2_control controller_parameters="/home/alex/additive_manufacturing/grasps_planner/install/panda_moveit_config/share/panda_moveit_config/config/controllers_effort.yaml" />
+-->
   <link name="world">
   </link>
   <joint name="panda_joint_base" type="fixed">
@@ -548,7 +551,7 @@
   </ros2_control>
   <gazebo>
     <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-      <parameters>/home/alex/additive_manufacturing/grasps_planner/install/panda_moveit_config/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
+      <parameters>/home/alex/additive_manufacturing/grasps_planner/install/share/panda_moveit_config/config/controllers_effort.yaml</parameters>
     </plugin>
   </gazebo>
 </robot>
